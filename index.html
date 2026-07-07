@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>책수다 — 완독 후 이야기 나눌 사람, 3일이면 충분해요</title>
+<meta name="description" content="같은 책을 최근에 읽은 사람들과 3일간 소규모로 편하게 이야기 나누는 도서 SNS 베타. 지금 얼리액세스 신청하세요.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF8F2; --ink:#1F1B16; --sub:#6B6259; --accent:#C7562B; --accent-dark:#A5461F;
+    --card:#FFFFFF; --line:#EAE3D8;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Pretendard',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;}
+  .wrap{max-width:640px;margin:0 auto;padding:0 24px;}
+  header.hero{padding:72px 0 48px;text-align:center;}
+  .eyebrow{display:inline-block;font-size:13px;font-weight:600;color:var(--accent);background:rgba(199,86,43,0.08);padding:6px 14px;border-radius:999px;margin-bottom:20px;}
+  h1{font-size:32px;font-weight:800;line-height:1.35;margin:0 0 16px;letter-spacing:-0.02em;}
+  .sub{font-size:17px;color:var(--sub);margin:0 auto 32px;max-width:480px;}
+  .btn-primary{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:16px;padding:16px 28px;border-radius:12px;text-decoration:none;border:none;cursor:pointer;transition:background .15s;}
+  .btn-primary:hover{background:var(--accent-dark);}
+  section{padding:40px 0;}
+  .pain{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px;margin:0 0 8px;}
+  .pain h2{font-size:20px;margin:0 0 14px;}
+  .pain p{color:var(--sub);font-size:15.5px;margin:0 0 10px;}
+  .pain p:last-child{margin-bottom:0;}
+  .steps{display:grid;gap:16px;margin-top:24px;}
+  .step{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;}
+  .step .num{flex:0 0 32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;}
+  .step h3{margin:0 0 4px;font-size:16px;}
+  .step p{margin:0;color:var(--sub);font-size:14.5px;}
+  .cta-box{background:var(--ink);color:#fff;border-radius:20px;padding:40px 28px;text-align:center;margin-top:16px;}
+  .cta-box h2{font-size:22px;margin:0 0 10px;}
+  .cta-box p{color:#D8D2C8;font-size:15px;margin:0 0 28px;}
+  form.signup{display:flex;flex-direction:column;gap:12px;max-width:360px;margin:0 auto;}
+  .signup input[type=email]{padding:14px 16px;border-radius:10px;border:none;font-size:15px;font-family:inherit;}
+  .signup .btn-primary{width:100%;}
+  .note{font-size:12.5px;color:#A69C8E;margin-top:14px;}
+  .success{display:none;color:#8FE3A3;font-weight:600;margin-top:10px;}
+  footer{text-align:center;padding:36px 0 60px;color:var(--sub);font-size:13px;}
+  footer a{color:var(--accent);text-decoration:none;}
+  h1 .accent{color:var(--accent);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">도서 서평 SNS · 베타 준비 중</span>
+    <h1>책 다 읽고 나서,<br>아무한테도 못한 이야기 있나요?</h1>
+    <p class="sub">인스타에 올리면 보여주기가 되고, 독서모임은 시간·장소 맞추기 힘들죠.
+    <strong>책수다</strong>는 같은 책을 최근에 다 읽은 사람 3~4명과 <strong>3일간</strong> 편하게 이야기 나누는 소규모 대화방을 만들어드려요.</p>
+    <a href="#signup" class="btn-primary">베타 얼리액세스 신청하기</a>
+  </header>
+
+  <section class="pain">
+    <h2>이런 적 있으신가요</h2>
+    <p>"드라마는 같이 볼 사람 쉽게 찾았는데, 책 이야기 나눌 사람은 없더라고요."</p>
+    <p>서평을 SNS에 올려도 좋아요만 쌓이고, 정작 그 책에 대해 진짜 대화를 나눈 적은 없다면 — 책수다가 그 자리를 만들어드립니다.</p>
+  </section>
+
+  <section>
+    <h2 style="font-size:20px;">어떻게 작동하나요</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div><h3>완독한 책을 등록해요</h3><p>지금 막 다 읽은 책, 혹은 최근에 읽은 책을 남겨주세요.</p></div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div><h3>같은 책을 읽은 사람과 자동 매칭</h3><p>비슷한 시기에 같은 책을 완독한 3~4명과 소규모 대화방이 만들어져요.</p></div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div><h3>3일 후 자연스럽게 종료</h3><p>부담 없이 짧게 이야기 나누고, 대화방은 스스로 사라져요. 다음 책에서 또 새로운 사람들과.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="signup">
+    <div class="cta-box">
+      <h2>가장 먼저 초대해드릴게요</h2>
+      <p>베타는 소규모로 시작합니다. 이메일을 남겨주시면 오픈 소식을 가장 먼저 전해드려요.</p>
+      <form class="signup" id="signupForm" action="https://formspree.io/f/mjgqzakb" method="POST">
+        <input type="text" name="recent_book" placeholder="최근에 다 읽은 책 제목 (선택)" >
+        <input type="email" name="email" placeholder="이메일 주소" required>
+        <button type="submit" class="btn-primary">얼리액세스 신청하기</button>
+      </form>
+      <p class="success" id="successMsg">신청 완료! 오픈하면 가장 먼저 연락드릴게요 🙌</p>
+      <p class="note">스팸 없이 베타 오픈 소식만 보내드립니다.</p>
+    </div>
+  </section>
+
+  <footer>
+    책수다(가칭) · 준비 중인 프로젝트입니다 · 문의 <a href="mailto:jay@adriven.co">jay@adriven.co</a>
+  </footer>
+
+</div>
+
+<script>
+  // Formspree AJAX 제출 — action의 YOUR_FORM_ID를 실제 Formspree 폼 ID로 교체해야 실제로 수집됩니다.
+  // 설정 방법은 랜딩페이지_배포_가이드.md 참고.
+  const form = document.getElementById('signupForm');
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const data = new FormData(form);
+    try{
+      const res = await fetch(form.action, { method:'POST', body:data, headers:{'Accept':'application/json'} });
+      if(res.ok){
+        form.style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+      } else {
+        alert('신청 중 문제가 발생했어요. 폼이 아직 연결되지 않았을 수 있어요 (배포 가이드 참고).');
+      }
+    } catch(err){
+      alert('신청 중 문제가 발생했어요. 폼이 아직 연결되지 않았을 수 있어요 (배포 가이드 참고).');
+    }
+  });
+</script>
+</body>
+</html>
